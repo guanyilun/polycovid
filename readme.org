@@ -1,3 +1,13 @@
 * polycovid
 "how many coronavirus cases are there in US? i wish to see it on my status bar." --someone
 
+[[https://raw.githubusercontent.com/guanyilun/polycovid/master/assets/screenshot_1.png]]
+
+It comes as a plugin to polybar. This is how i set it up
+
+#+BEGIN_SRC
+[module/covid]
+type = custom/script
+exec = ~/dotfiles/polybar/covid
+interval = 1800
+#+END_SRC
