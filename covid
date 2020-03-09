@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import requests,json
+
+res = requests.get("https://ncov.dxy.cn/ncovh5/view/pneumonia")
+data = json.loads(res.text.split("window.getListByCountryTypeService2 = ")[1].split("}catch(e){}")[0])
+us_data = [d for d in data if d['locationId']==971002][0]
+
+confirm = us_data['confirmedCount']
+dead = us_data['deadCount']
+
+#print(f" 😫 {confirm} 🙏 {dead}")
+print(f" 🤕 {confirm} 🙏 {dead}")
