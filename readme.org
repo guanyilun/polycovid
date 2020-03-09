@@ -11,3 +11,7 @@ type = custom/script
 exec = ~/dotfiles/polybar/covid
 interval = 1800
 #+END_SRC
+
+A fullscreen view
+
+[[https://raw.githubusercontent.com/guanyilun/polycovid/master/assets/screenshot_2.png]]

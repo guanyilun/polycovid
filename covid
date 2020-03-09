@@ -2,12 +2,14 @@
 
 import requests,json
 
+# a popular chinese website
 res = requests.get("https://ncov.dxy.cn/ncovh5/view/pneumonia")
 data = json.loads(res.text.split("window.getListByCountryTypeService2 = ")[1].split("}catch(e){}")[0])
+
+# i only looked at US, other contries need to replace the locationId
 us_data = [d for d in data if d['locationId']==971002][0]
 
 confirm = us_data['confirmedCount']
 dead = us_data['deadCount']
 
-#print(f" 😫 {confirm} 🙏 {dead}")
 print(f" 🤕 {confirm} 🙏 {dead}")
