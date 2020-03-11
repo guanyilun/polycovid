@@ -15,3 +15,5 @@ interval = 1800
 A fullscreen view
 
 [[https://raw.githubusercontent.com/guanyilun/polycovid/master/assets/screenshot_2.png]]
+
+There are two crawlers i included. The first =covid= comes from a Chinese website. It sometimes updates slowly, though it's still faster than CDC. The second crawler =covid_us= comes from a website in the US so it's faster so i recommand that.
