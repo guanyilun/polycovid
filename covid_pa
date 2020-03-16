@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+from bs4 import BeautifulSoup
+import requests
+
+res = requests.get("https://coronavirus.1point3acres.com/en")
+soup = BeautifulSoup(res.text, 'lxml')
+
+# confirmed and death in Pennsyvania
+PA = soup.findAll('span',class_='jsx-1168542486')
+PA_confirmed = [e for e in PA][61].text
+PA_deaths = [e for e in PA][62].text
+print(f"🤕 {PA_confirmed} 🙏 {PA_deaths}")
